@@ -38,6 +38,12 @@ class Fixnum
       teens_array_loc = converted_numbers.at(2).to_i()
       teens_place = teens.fetch(teens_array_loc)
       word_number = hundreds_place + " hundred " + teens_place
+    elsif converted_numbers_length == 3 && converted_numbers.at(1).to_i() == 0
+      hundreds_array_loc = converted_numbers.at(0).to_i()
+      hundreds_place = ones.fetch(hundreds_array_loc)
+      ones_array_loc = converted_numbers.at(2).to_i()
+      ones_place = ones.fetch(ones_array_loc)
+      word_number = hundreds_place + " hundred " + ones_place
     end
     word_number
   end
