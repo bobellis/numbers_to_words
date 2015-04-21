@@ -21,4 +21,8 @@ describe('String#numbers_to_words') do
   it('takes three digit number that is a multiple of 100 and returns the string value') do
     expect(200.numbers_to_words()).to(eq("two hundred"))
   end
+
+  it('takes a three digit number with a teens component') do
+    expect(213.numbers_to_words()).to(eq("two hundred thirteen"))
+  end
 end
