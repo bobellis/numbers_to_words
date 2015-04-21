@@ -25,4 +25,8 @@ describe('String#numbers_to_words') do
   it('takes a three digit number with a teens component') do
     expect(213.numbers_to_words()).to(eq("two hundred thirteen"))
   end
+
+  it('takes three digit number with a zero value in the tens place') do
+    expect(704.numbers_to_words()).to(eq("seven hundred four"))
+  end
 end
